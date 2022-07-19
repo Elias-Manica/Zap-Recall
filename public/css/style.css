@@ -167,6 +167,7 @@ h1 {
   font-size: 18px;
   line-height: 22px;
   padding-top: 10px;
+
   color: #333333;
 }
 
@@ -177,25 +178,73 @@ h1 {
   justify-content: space-evenly;
 }
 
-.dontRemember {
-  width: 40%;
-  height: 5%;
+.answer-visible .dontRemember {
+  width: 85px;
+  height: 40px;
   background: #ff3030;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.dontRemember p {
-  word-break: break-all;
+.answer-visible .dontRemember p {
+  font-family: "Recursive";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
 }
 
-.almostRemember {
+.answer-visible .almostRemember {
+  width: 85px;
+  height: 40px;
   background: #ff922e;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.remember {
+.answer-visible .almostRemember p {
+  font-family: "Recursive";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.answer-visible .remember {
+  width: 85px;
+  height: 40px;
   background: #2fbe34;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.answer-visible .remember p {
+  font-family: "Recursive";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
 }
 
 .questions :nth-child(4) {
