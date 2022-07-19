@@ -1,20 +1,34 @@
 function Question({ numberQuestion }) {
   return (
     <div className="question">
-      <h2>Pergunta {numberQuestion}</h2>
-      <ion-icon
-        name="play-circle-outline"
-        onClick={() => console.log(`você clicou na carta ${numberQuestion}`)}
-      ></ion-icon>
-    </div>
-  );
-}
+      <div className="frontQuestion hide">
+        <h2>Pergunta {numberQuestion}</h2>
+        <ion-icon
+          name="play-circle-outline"
+          onClick={() => console.log(`você clicou na carta ${numberQuestion}`)}
+        ></ion-icon>
+      </div>
 
-function QuestionVisible() {
-  return (
-    <div className="question-visible">
-      <p>O que é JSX?</p>
-      <ion-icon name="return-down-back-outline"></ion-icon>
+      <div className="question-visible ">
+        <div className="frontAnswer hide">
+          <p className="">O que é JSX?</p>
+          <ion-icon name="return-down-back-outline"></ion-icon>
+        </div>
+        <div className="answer-visible ">
+          <p>JSX é uma sintaxe para escrever HTML dentro do JS</p>
+          <div className="answers">
+            <div className="dontRemember">
+              <p>Não lembrei</p>
+            </div>
+            <div className="almostRemember">
+              <p>Quase não lembrei</p>
+            </div>
+            <div className="remember">
+              <p>Zap</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -42,7 +56,6 @@ export default function InicialDisplay() {
         <h1>ZapRecall</h1>
       </div>
       <div className="questions">
-        <QuestionVisible />
         {data.map((item) => (
           <Question numberQuestion={item.numberQuestion} />
         ))}
