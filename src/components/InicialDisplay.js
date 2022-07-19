@@ -10,6 +10,15 @@ function Question({ numberQuestion }) {
   );
 }
 
+function QuestionVisible() {
+  return (
+    <div className="question-visible">
+      <p>O que é JSX?</p>
+      <ion-icon name="return-down-back-outline"></ion-icon>
+    </div>
+  );
+}
+
 export default function InicialDisplay() {
   const data = [
     {
@@ -33,6 +42,7 @@ export default function InicialDisplay() {
         <h1>ZapRecall</h1>
       </div>
       <div className="questions">
+        <QuestionVisible />
         {data.map((item) => (
           <Question numberQuestion={item.numberQuestion} />
         ))}
