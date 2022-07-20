@@ -1,7 +1,7 @@
 function Question({ numberQuestion }) {
   return (
     <div className="question">
-      <div className="frontQuestion hide">
+      <div className="frontQuestion ">
         <h2>Pergunta {numberQuestion}</h2>
         <ion-icon
           name="play-circle-outline"
@@ -14,7 +14,7 @@ function Question({ numberQuestion }) {
           <p className="">O que é JSX?</p>
           <ion-icon name="return-down-back-outline"></ion-icon>
         </div>
-        <div className="answer-visible ">
+        <div className="answer-visible hide">
           <p>JSX é uma sintaxe para escrever HTML dentro do JS</p>
           <div className="answers">
             <div className="dontRemember">
@@ -50,14 +50,14 @@ export default function InicialDisplay() {
   ];
 
   return (
-    <div className="inicialDisplay">
+    <div className="inicialDisplay ">
       <div className="tittle">
         <img src="./images/light.png" alt=""></img>
         <h1>ZapRecall</h1>
       </div>
       <div className="questions">
-        {data.map((item) => (
-          <Question numberQuestion={item.numberQuestion} />
+        {data.map((item, index) => (
+          <Question numberQuestion={item.numberQuestion} key={index} />
         ))}
       </div>
 
