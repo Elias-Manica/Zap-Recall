@@ -7,6 +7,7 @@ import AnswerVisible from "./AnswerVisible";
 function Question({ numberQuestion, question, answer }) {
   const [front, setFront] = React.useState("frontQuestion");
   const [show, setShow] = React.useState("hide");
+  const [visibleAnswer, setVisibleAnswer] = React.useState("hide");
 
   return (
     <div className="question">
@@ -18,8 +19,17 @@ function Question({ numberQuestion, question, answer }) {
       />
 
       <div className="question-visible ">
-        <ShowQuestion question={question} show={show} setShow={setShow} />
-        <AnswerVisible answer={answer} />
+        <ShowQuestion
+          question={question}
+          show={show}
+          setShow={setShow}
+          setVisibleAnswer={setVisibleAnswer}
+        />
+        <AnswerVisible
+          answer={answer}
+          visibleAnswer={visibleAnswer}
+          setVisibleAnswer={setVisibleAnswer}
+        />
       </div>
     </div>
   );

@@ -1,7 +1,11 @@
-export default function AnswerVisible({ answer }) {
+export default function AnswerVisible({
+  answer,
+  visibleAnswer,
+  setVisibleAnswer,
+}) {
   return (
     <>
-      <div className="answer-visible hide">
+      <div className={visibleAnswer}>
         <p>{answer}</p>
         <div className="answers">
           <div className="dontRemember">
