@@ -10,25 +10,19 @@ export default function AnswerVisible({
   icons,
   setIcons,
 }) {
-  function hideAnswer(e) {
+  function hideAnswer(option) {
     setCounter((counter = counter + 1));
     setVisibleAnswer("hide");
     setFront("frontQuestion");
-    if (e.target.innerHTML === "<p>Zap</p>" || e.target.innerHTML === "Zap") {
+    if (option === "Zap") {
       setColorText("green");
       setIcon("checkmark-circle-sharp");
       setIcons([...icons, <ion-icon name="checkmark-circle-sharp"></ion-icon>]);
-    } else if (
-      e.target.innerHTML === "Quase não lembrei" ||
-      e.target.innerHTML === "<p>Quase não lembrei</p>"
-    ) {
+    } else if (option === "Quase não lembrei") {
       setColorText("orange");
       setIcon("help-circle-sharp");
       setIcons([...icons, <ion-icon name="help-circle-sharp"></ion-icon>]);
-    } else if (
-      e.target.innerHTML === "Não lembrei" ||
-      e.target.innerHTML === "<p>Não lembrei</p>"
-    ) {
+    } else if (option === "Não lembrei") {
       setColorText("red");
       setIcon("close-circle-sharp");
       setIcons([...icons, <ion-icon name="close-circle-sharp"></ion-icon>]);
@@ -40,13 +34,19 @@ export default function AnswerVisible({
       <div className={visibleAnswer}>
         <p>{answer}</p>
         <div className="answers">
-          <div className="dontRemember" onClick={(e) => hideAnswer(e)}>
+          <div
+            className="dontRemember"
+            onClick={() => hideAnswer("Não lembrei")}
+          >
             <p>Não lembrei</p>
           </div>
-          <div className="almostRemember" onClick={(e) => hideAnswer(e)}>
+          <div
+            className="almostRemember"
+            onClick={() => hideAnswer("Quase não lembrei")}
+          >
             <p>Quase não lembrei</p>
           </div>
-          <div className="remember" onClick={(e) => hideAnswer(e)}>
+          <div className="remember" onClick={() => hideAnswer("Zap")}>
             <p>Zap</p>
           </div>
         </div>
