@@ -7,6 +7,8 @@ export default function AnswerVisible({
   setFront,
   setColorText,
   setIcon,
+  icons,
+  setIcons,
 }) {
   function hideAnswer(e) {
     setCounter((counter = counter + 1));
@@ -15,18 +17,21 @@ export default function AnswerVisible({
     if (e.target.innerHTML === "<p>Zap</p>" || e.target.innerHTML === "Zap") {
       setColorText("green");
       setIcon("checkmark-circle-sharp");
+      setIcons([...icons, <ion-icon name="checkmark-circle-sharp"></ion-icon>]);
     } else if (
       e.target.innerHTML === "Quase não lembrei" ||
       e.target.innerHTML === "<p>Quase não lembrei</p>"
     ) {
       setColorText("orange");
       setIcon("help-circle-sharp");
+      setIcons([...icons, <ion-icon name="help-circle-sharp"></ion-icon>]);
     } else if (
       e.target.innerHTML === "Não lembrei" ||
       e.target.innerHTML === "<p>Não lembrei</p>"
     ) {
       setColorText("red");
       setIcon("close-circle-sharp");
+      setIcons([...icons, <ion-icon name="close-circle-sharp"></ion-icon>]);
     }
   }
 

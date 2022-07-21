@@ -5,7 +5,15 @@ import ShowQuestion from "./ShowQuestion";
 import AnswerVisible from "./AnswerVisible";
 import BottomStatus from "./BottomStatus";
 
-function Question({ numberQuestion, question, answer, setCounter, counter }) {
+function Question({
+  numberQuestion,
+  question,
+  answer,
+  setCounter,
+  counter,
+  icons,
+  setIcons,
+}) {
   const [front, setFront] = React.useState("frontQuestion");
   const [show, setShow] = React.useState("hide");
   const [visibleAnswer, setVisibleAnswer] = React.useState("hide");
@@ -39,6 +47,8 @@ function Question({ numberQuestion, question, answer, setCounter, counter }) {
           setFront={setFront}
           setColorText={setColorText}
           setIcon={setIcon}
+          icons={icons}
+          setIcons={setIcons}
         />
       </div>
     </div>
@@ -69,6 +79,7 @@ export default function InicialDisplay() {
     },
   ];
   const [counter, setCounter] = React.useState(0);
+  const [icons, setIcons] = React.useState([]);
   return (
     <div className="inicialDisplay ">
       <div className="tittle">
@@ -84,11 +95,13 @@ export default function InicialDisplay() {
             answer={item.answer}
             counter={counter}
             setCounter={setCounter}
+            icons={icons}
+            setIcons={setIcons}
           />
         ))}
       </div>
 
-      <BottomStatus counter={counter} />
+      <BottomStatus counter={counter} icons={icons} />
     </div>
   );
 }
