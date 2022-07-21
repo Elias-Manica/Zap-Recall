@@ -260,13 +260,13 @@ h1 {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 70px;
   background: #ffffff;
   box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 30px;
 }
 
 .bottomStatus p {
@@ -275,6 +275,16 @@ h1 {
   font-size: 18px;
   line-height: 22px;
 
+  color: #333333;
+}
+
+.msgFinal h3 {
+  font-family: "Recursive";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
   color: #333333;
 }
 

@@ -19,6 +19,7 @@ function Question({
   const [visibleAnswer, setVisibleAnswer] = React.useState("hide");
   const [colorText, setColorText] = React.useState("black");
   const [icon, setIcon] = React.useState("play-circle-outline");
+  const [dataAnswer, setDataAnswer] = React.useState(0);
 
   return (
     <div className="question">
@@ -49,6 +50,8 @@ function Question({
           setIcon={setIcon}
           icons={icons}
           setIcons={setIcons}
+          dataAnswer={dataAnswer}
+          setDataAnswer={setDataAnswer}
         />
       </div>
     </div>
