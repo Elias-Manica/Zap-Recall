@@ -13,7 +13,7 @@ export default function AnswerVisible({
   function hideAnswer(option) {
     setCounter((counter = counter + 1));
     setVisibleAnswer("hide");
-    setFront("frontQuestion");
+    setFront("frontQuestion noClick");
     if (option === "Zap") {
       setColorText("green");
       setIcon("checkmark-circle-sharp");

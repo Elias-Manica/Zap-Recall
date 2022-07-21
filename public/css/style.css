@@ -313,6 +313,10 @@ ion-icon[name="close-circle-sharp"] {
   display: none;
 }
 
+.noClick {
+  pointer-events: none;
+}
+
 @media (max-width: 935px) {
   .buttomStart {
     width: 80%;
