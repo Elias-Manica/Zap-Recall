@@ -1,7 +1,7 @@
-export default function ShowQuestion({ question }) {
+export default function ShowQuestion({ question, show, setShow }) {
   return (
     <>
-      <div className="frontAnswer hide">
+      <div className={show}>
         <p className="">{question}</p>
         <ion-icon name="return-down-back-outline"></ion-icon>
       </div>

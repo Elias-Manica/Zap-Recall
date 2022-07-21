@@ -1,14 +1,24 @@
+import React from "react";
+
 import FrontQuestion from "./FrontQuestion";
 import ShowQuestion from "./ShowQuestion";
 import AnswerVisible from "./AnswerVisible";
 
 function Question({ numberQuestion, question, answer }) {
+  const [front, setFront] = React.useState("frontQuestion");
+  const [show, setShow] = React.useState("hide");
+
   return (
     <div className="question">
-      <FrontQuestion numberQuestion={numberQuestion} />
+      <FrontQuestion
+        numberQuestion={numberQuestion}
+        front={front}
+        setFront={setFront}
+        setShow={setShow}
+      />
 
       <div className="question-visible ">
-        <ShowQuestion question={question} />
+        <ShowQuestion question={question} show={show} setShow={setShow} />
         <AnswerVisible answer={answer} />
       </div>
     </div>
