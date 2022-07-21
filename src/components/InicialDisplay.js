@@ -9,6 +9,7 @@ function Question({ numberQuestion, question, answer, setCounter, counter }) {
   const [front, setFront] = React.useState("frontQuestion");
   const [show, setShow] = React.useState("hide");
   const [visibleAnswer, setVisibleAnswer] = React.useState("hide");
+  const [colorText, setColorText] = React.useState("black");
 
   return (
     <div className="question">
@@ -17,6 +18,7 @@ function Question({ numberQuestion, question, answer, setCounter, counter }) {
         front={front}
         setFront={setFront}
         setShow={setShow}
+        colorText={colorText}
       />
 
       <div className="question-visible ">
@@ -32,6 +34,8 @@ function Question({ numberQuestion, question, answer, setCounter, counter }) {
           setVisibleAnswer={setVisibleAnswer}
           counter={counter}
           setCounter={setCounter}
+          setFront={setFront}
+          setColorText={setColorText}
         />
       </div>
     </div>

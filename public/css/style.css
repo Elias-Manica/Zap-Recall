@@ -111,8 +111,6 @@ h1 {
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
-
-  color: #333333;
 }
 
 .frontQuestion ion-icon {
@@ -277,6 +275,25 @@ h1 {
   line-height: 22px;
 
   color: #333333;
+}
+
+.black {
+  color: #333333;
+}
+
+.red {
+  color: #ff3030;
+  text-decoration: line-through;
+}
+
+.orange {
+  color: #ff922e;
+  text-decoration: line-through;
+}
+
+.green {
+  color: #2fbe34;
+  text-decoration: line-through;
 }
 
 .hide {
