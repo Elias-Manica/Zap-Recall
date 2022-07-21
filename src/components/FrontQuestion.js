@@ -4,6 +4,7 @@ export default function FrontQuestion({
   setFront,
   setShow,
   colorText,
+  icon,
 }) {
   function call() {
     setFront("hide");
@@ -13,7 +14,7 @@ export default function FrontQuestion({
     <>
       <div className={front}>
         <h2 className={colorText}>Pergunta {numberQuestion}</h2>
-        <ion-icon name="play-circle-outline" onClick={() => call()}></ion-icon>
+        <ion-icon name={icon} onClick={() => call()}></ion-icon>
       </div>
     </>
   );

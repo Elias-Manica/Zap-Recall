@@ -6,6 +6,7 @@ export default function AnswerVisible({
   counter,
   setFront,
   setColorText,
+  setIcon,
 }) {
   function hideAnswer(e) {
     setCounter((counter = counter + 1));
@@ -13,16 +14,19 @@ export default function AnswerVisible({
     setFront("frontQuestion");
     if (e.target.innerHTML === "<p>Zap</p>" || e.target.innerHTML === "Zap") {
       setColorText("green");
+      setIcon("checkmark-circle-sharp");
     } else if (
       e.target.innerHTML === "Quase não lembrei" ||
       e.target.innerHTML === "<p>Quase não lembrei</p>"
     ) {
       setColorText("orange");
+      setIcon("help-circle-sharp");
     } else if (
       e.target.innerHTML === "Não lembrei" ||
       e.target.innerHTML === "<p>Não lembrei</p>"
     ) {
       setColorText("red");
+      setIcon("close-circle-sharp");
     }
   }
 

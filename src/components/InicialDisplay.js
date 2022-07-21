@@ -10,6 +10,7 @@ function Question({ numberQuestion, question, answer, setCounter, counter }) {
   const [show, setShow] = React.useState("hide");
   const [visibleAnswer, setVisibleAnswer] = React.useState("hide");
   const [colorText, setColorText] = React.useState("black");
+  const [icon, setIcon] = React.useState("play-circle-outline");
 
   return (
     <div className="question">
@@ -19,6 +20,7 @@ function Question({ numberQuestion, question, answer, setCounter, counter }) {
         setFront={setFront}
         setShow={setShow}
         colorText={colorText}
+        icon={icon}
       />
 
       <div className="question-visible ">
@@ -36,6 +38,7 @@ function Question({ numberQuestion, question, answer, setCounter, counter }) {
           setCounter={setCounter}
           setFront={setFront}
           setColorText={setColorText}
+          setIcon={setIcon}
         />
       </div>
     </div>

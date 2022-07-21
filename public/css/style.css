@@ -296,6 +296,18 @@ h1 {
   text-decoration: line-through;
 }
 
+ion-icon[name="checkmark-circle-sharp"] {
+  color: #2fbe34;
+}
+
+ion-icon[name="help-circle-sharp"] {
+  color: #ff922e;
+}
+
+ion-icon[name="close-circle-sharp"] {
+  color: #ff3030;
+}
+
 .hide {
   display: none;
 }
