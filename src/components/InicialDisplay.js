@@ -1,4 +1,4 @@
-function Question({ numberQuestion }) {
+function Question({ numberQuestion, question, answer }) {
   return (
     <div className="question">
       <div className="frontQuestion ">
@@ -11,11 +11,11 @@ function Question({ numberQuestion }) {
 
       <div className="question-visible ">
         <div className="frontAnswer hide">
-          <p className="">O que é JSX?</p>
+          <p className="">{question}</p>
           <ion-icon name="return-down-back-outline"></ion-icon>
         </div>
         <div className="answer-visible hide">
-          <p>JSX é uma sintaxe para escrever HTML dentro do JS</p>
+          <p>{answer}</p>
           <div className="answers">
             <div className="dontRemember">
               <p>Não lembrei</p>
@@ -37,15 +37,23 @@ export default function InicialDisplay() {
   const data = [
     {
       numberQuestion: 1,
+      question: "O que é JSX?",
+      answer: "Uma extensão de linguagem do JavaScript",
     },
     {
       numberQuestion: 2,
+      question: "O React é __",
+      answer: "uma biblioteca JavaScript para construção de interfaces",
     },
     {
       numberQuestion: 3,
+      question: "Componentes devem iniciar com __ ",
+      answer: "letra maiúscula",
     },
     {
       numberQuestion: 4,
+      question: "Podemos colocar __ dentro do JSX",
+      answer: "expressões",
     },
   ];
 
@@ -57,7 +65,12 @@ export default function InicialDisplay() {
       </div>
       <div className="questions">
         {data.map((item, index) => (
-          <Question numberQuestion={item.numberQuestion} key={index} />
+          <Question
+            numberQuestion={item.numberQuestion}
+            key={index}
+            question={item.question}
+            answer={item.answer}
+          />
         ))}
       </div>
 
