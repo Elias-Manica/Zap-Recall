@@ -3,8 +3,9 @@ import React from "react";
 import FrontQuestion from "./FrontQuestion";
 import ShowQuestion from "./ShowQuestion";
 import AnswerVisible from "./AnswerVisible";
+import BottomStatus from "./BottomStatus";
 
-function Question({ numberQuestion, question, answer }) {
+function Question({ numberQuestion, question, answer, setCounter, counter }) {
   const [front, setFront] = React.useState("frontQuestion");
   const [show, setShow] = React.useState("hide");
   const [visibleAnswer, setVisibleAnswer] = React.useState("hide");
@@ -29,6 +30,8 @@ function Question({ numberQuestion, question, answer }) {
           answer={answer}
           visibleAnswer={visibleAnswer}
           setVisibleAnswer={setVisibleAnswer}
+          counter={counter}
+          setCounter={setCounter}
         />
       </div>
     </div>
@@ -58,7 +61,7 @@ export default function InicialDisplay() {
       answer: "expressões",
     },
   ];
-
+  const [counter, setCounter] = React.useState(0);
   return (
     <div className="inicialDisplay ">
       <div className="tittle">
@@ -72,13 +75,13 @@ export default function InicialDisplay() {
             key={index}
             question={item.question}
             answer={item.answer}
+            counter={counter}
+            setCounter={setCounter}
           />
         ))}
       </div>
 
-      <div className="bottomStatus">
-        <p>0/4 CONCLUÍDOS</p>
-      </div>
+      <BottomStatus counter={counter} />
     </div>
   );
 }
