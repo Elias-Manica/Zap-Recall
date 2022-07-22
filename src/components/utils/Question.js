@@ -1,6 +1,9 @@
 import React from "react";
+
+import "../assets/css/style.css";
+
 import AnswerVisible from "../AnswerVisible";
-import FrontQuestion from "../FrontQuestion";
+import FrontQuestion from "../FrontQuestion/FrontQuestion";
 import ShowQuestion from "../ShowQuestion";
 
 export default function Question({

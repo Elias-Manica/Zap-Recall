@@ -1,9 +1,10 @@
 import React from "react";
 
+import "../assets/css/style.css";
 import "./style.css";
 
-import BottomStatus from "../BottomStatus";
-import Tittle from "../Tittle";
+import BottomStatus from "../BottomStatus/BottomStatus";
+import Tittle from "../Tittle/Tittle";
 
 import selectFourCard from "../utils/selectFourCard";
 import shuffleArray from "../utils/shuffleArray";

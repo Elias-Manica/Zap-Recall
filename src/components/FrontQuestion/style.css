@@ -1,0 +1,45 @@
+.frontQuestion {
+  width: 600px;
+  height: 65px;
+  background: #ffffff;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: center;
+  padding-left: 2%;
+  padding-right: 2%;
+  cursor: pointer;
+}
+
+.frontQuestion h2 {
+  font-family: "Recursive";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.frontQuestion ion-icon {
+  color: #333333;
+  font-size: 20px;
+}
+
+ion-icon[name="checkmark-circle-sharp"] {
+  color: #2fbe34;
+}
+
+ion-icon[name="help-circle-sharp"] {
+  color: #ff922e;
+}
+
+ion-icon[name="close-circle-sharp"] {
+  color: #ff3030;
+}
+
+@media (max-width: 935px) {
+  .frontQuestion {
+    width: 100%;
+  }
+}

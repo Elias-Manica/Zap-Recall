@@ -1,0 +1,10 @@
+.tittle {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.tittle img {
+  width: 52px;
+  height: 60px;
+  margin-right: 20px;
+}

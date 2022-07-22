@@ -1,3 +1,5 @@
+import "./style.css";
+
 export default function BottomStatus({ counter, icons, msgFinal, restart }) {
   return (
     <>

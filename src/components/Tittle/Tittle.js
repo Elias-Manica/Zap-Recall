@@ -1,4 +1,5 @@
-import logoZap from "./assets/images/light.png";
+import logoZap from "../assets/images/light.png";
+import "./style.css";
 
 export default function Tittle() {
   return (

@@ -1,0 +1,65 @@
+.bottomStatus {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.bottomStatus p {
+  font-family: "Recursive";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #333333;
+}
+
+.msgFinal h3 {
+  font-family: "Recursive";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.msgFinal h4 {
+  font-family: "Recursive";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.restart {
+  width: 50%;
+  height: 32px;
+  background: #fb6b6b;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Recursive";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 15px;
+  color: #ffffff;
+  cursor: pointer;
+}

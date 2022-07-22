@@ -10,3 +10,9 @@
   align-items: center;
   width: 100%;
 }
+
+@media (max-width: 935px) {
+  .question {
+    width: 80%;
+  }
+}

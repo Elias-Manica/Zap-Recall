@@ -30,3 +30,9 @@
   text-align: center;
   color: #d70900;
 }
+
+@media (max-width: 935px) {
+  .buttomStart {
+    width: 80%;
+  }
+}
