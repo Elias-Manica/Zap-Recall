@@ -12,6 +12,7 @@ export default function AnswerVisible({
   counterAnswer,
   setCounterAnswer,
   setMsgFinal,
+  setRestart,
 }) {
   function hideAnswer(option) {
     setVisibleAnswer("hide");
@@ -39,11 +40,13 @@ export default function AnswerVisible({
           ["😞 Putz..."],
           ["Ainda faltam alguns... Mas não desanime!"],
         ]);
+        setRestart("restart");
       } else {
         setMsgFinal([
           ["🥳 Parabéns!"],
           ["Você não esqueceu de nenhum flashcard!"],
         ]);
+        setRestart("restart");
       }
     } else {
       setCounter((counter = counter + 1));

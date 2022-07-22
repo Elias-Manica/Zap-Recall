@@ -1,4 +1,4 @@
-export default function BottomStatus({ counter, icons, msgFinal }) {
+export default function BottomStatus({ counter, icons, msgFinal, restart }) {
   return (
     <>
       <div className="bottomStatus">
@@ -11,6 +11,9 @@ export default function BottomStatus({ counter, icons, msgFinal }) {
           {icons.map((item, index) => (
             <span key={index}>{item}</span>
           ))}
+        </div>
+        <div className={restart} onClick={() => window.location.reload()}>
+          REINICIAR RECALL
         </div>
       </div>
     </>

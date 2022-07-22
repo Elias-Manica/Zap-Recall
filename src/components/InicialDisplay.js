@@ -53,6 +53,7 @@ export default function InicialDisplay() {
   const [icons, setIcons] = React.useState([]);
   const [counterAnswer, setCounterAnswer] = React.useState(0);
   const [msgFinal, setMsgFinal] = React.useState([[""], [""]]);
+  const [restart, setRestart] = React.useState("hide");
 
   return (
     <div className="inicialDisplay ">
@@ -72,6 +73,7 @@ export default function InicialDisplay() {
             setCounterAnswer={setCounterAnswer}
             msgFinal={msgFinal}
             setMsgFinal={setMsgFinal}
+            setRestart={setRestart}
           />
         ))}
       </div>
@@ -81,6 +83,7 @@ export default function InicialDisplay() {
         icons={icons}
         msgFinal={msgFinal}
         setMsgFinal={setMsgFinal}
+        restart={restart}
       />
     </div>
   );

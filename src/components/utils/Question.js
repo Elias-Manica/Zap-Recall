@@ -14,6 +14,7 @@ export default function Question({
   counterAnswer,
   setCounterAnswer,
   setMsgFinal,
+  setRestart,
 }) {
   const [front, setFront] = React.useState("frontQuestion");
   const [show, setShow] = React.useState("hide");
@@ -53,6 +54,7 @@ export default function Question({
           counterAnswer={counterAnswer}
           setCounterAnswer={setCounterAnswer}
           setMsgFinal={setMsgFinal}
+          setRestart={setRestart}
         />
       </div>
     </div>
