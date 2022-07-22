@@ -18,17 +18,17 @@ h1 {
   color: #ffffff;
 }
 
-.root {
+.allScreens {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .welcomeUser {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  top: 50%;
-  transform: translateY(50%);
 }
 
 .welcomeUser img {
@@ -48,7 +48,7 @@ h1 {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin-top: 130px;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -67,11 +67,11 @@ h1 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 20px;
 }
 
 .tittle {
   display: flex;
+  margin-bottom: 30px;
 }
 
 .tittle img {
@@ -85,9 +85,6 @@ h1 {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  position: relative;
-  top: 50%;
-  transform: translateY(5%);
 }
 
 .frontQuestion {
@@ -318,6 +315,7 @@ h1 {
   text-align: center;
   margin-top: 15px;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .black {

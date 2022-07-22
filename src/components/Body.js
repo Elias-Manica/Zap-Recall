@@ -11,7 +11,7 @@ export default function Body() {
 
   return (
     <div className="allScreens">
-      <div>
+      <>
         {changeScreen ? (
           <>
             <WelcomeUser />
@@ -25,7 +25,7 @@ export default function Body() {
         ) : (
           <InicialDisplay />
         )}
-      </div>
+      </>
     </div>
   );
 }
