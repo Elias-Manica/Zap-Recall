@@ -1,9 +1,4 @@
-export default function BottomStatus({
-  counter,
-  icons,
-  msgFinal,
-  setMsgFinal,
-}) {
+export default function BottomStatus({ counter, icons, msgFinal }) {
   return (
     <>
       <div className="bottomStatus">
