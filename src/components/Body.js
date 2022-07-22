@@ -1,5 +1,8 @@
 import React from "react";
 
+import "./assets/css/reset.css";
+import "./assets/css/style.css";
+
 import WelcomeUser from "./WelcomeUser";
 import InicialDisplay from "./InicialDisplay";
 
