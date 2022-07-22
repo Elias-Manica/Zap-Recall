@@ -21,6 +21,10 @@
   color: #333333;
 }
 
+.questions :nth-child(4) {
+  margin-bottom: 70px;
+}
+
 .msgFinal h3 {
   font-family: "Recursive";
   font-style: normal;

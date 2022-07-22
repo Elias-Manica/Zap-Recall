@@ -2,9 +2,9 @@ import React from "react";
 
 import "../assets/css/style.css";
 
-import AnswerVisible from "../AnswerVisible";
+import AnswerVisible from "../AnswerVisible/AnswerVisible";
 import FrontQuestion from "../FrontQuestion/FrontQuestion";
-import ShowQuestion from "../ShowQuestion";
+import ShowQuestion from "../ShowQuestions/ShowQuestion";
 
 export default function Question({
   numberQuestion,
