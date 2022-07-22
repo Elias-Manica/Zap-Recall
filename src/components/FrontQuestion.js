@@ -13,7 +13,7 @@ export default function FrontQuestion({
   return (
     <>
       <div className={front}>
-        <h2 className={colorText}>Pergunta {numberQuestion}</h2>
+        <h2 className={colorText}>Pergunta {numberQuestion + 1}</h2>
         <ion-icon name={icon} onClick={() => call()}></ion-icon>
       </div>
     </>

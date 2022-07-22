@@ -4,6 +4,7 @@ import FrontQuestion from "./FrontQuestion";
 import ShowQuestion from "./ShowQuestion";
 import AnswerVisible from "./AnswerVisible";
 import BottomStatus from "./BottomStatus";
+import Tittle from "./Tittle";
 
 function Question({
   numberQuestion,
@@ -64,40 +65,65 @@ function Question({
 export default function InicialDisplay() {
   const data = [
     {
-      numberQuestion: 1,
+      numb: 1,
       question: "O que é JSX?",
       answer: "Uma extensão de linguagem do JavaScript",
     },
     {
-      numberQuestion: 2,
       question: "O React é __",
       answer: "uma biblioteca JavaScript para construção de interfaces",
     },
     {
-      numberQuestion: 3,
       question: "Componentes devem iniciar com __ ",
       answer: "letra maiúscula",
     },
     {
-      numberQuestion: 4,
       question: "Podemos colocar __ dentro do JSX",
       answer: "expressões",
     },
+    {
+      question: "O ReactDOM nos ajuda __",
+      answer: "interagindo com a DOM para colocar componentes React na mesma",
+    },
+    {
+      question: "Usamos o npm para __",
+      answer: "gerenciar os pacotes necessários e suas dependências",
+    },
+    {
+      question: "Usamos props para __",
+      answer: "passar diferentes informações para componentes",
+    },
+    {
+      question: "Usamos estado (state) para __",
+      answer:
+        "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente",
+    },
   ];
+
+  function shuffleArray(inputArray) {
+    inputArray.sort(() => Math.random() - 0.5);
+  }
+
+  shuffleArray(data);
+
+  function selectFourCard(array) {
+    return array.splice(0, 4);
+  }
+
+  selectFourCard(data);
+
   const [counter, setCounter] = React.useState(0);
   const [icons, setIcons] = React.useState([]);
   const [counterAnswer, setCounterAnswer] = React.useState(0);
   const [msgFinal, setMsgFinal] = React.useState([[""], [""]]);
+
   return (
     <div className="inicialDisplay ">
-      <div className="tittle">
-        <img src="./images/light.png" alt=""></img>
-        <h1>ZapRecall</h1>
-      </div>
+      <Tittle />
       <div className="questions">
         {data.map((item, index) => (
           <Question
-            numberQuestion={item.numberQuestion}
+            numberQuestion={index}
             key={index}
             question={item.question}
             answer={item.answer}
