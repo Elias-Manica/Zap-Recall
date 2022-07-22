@@ -9,45 +9,45 @@ export default function AnswerVisible({
   setIcon,
   icons,
   setIcons,
-  dataAnswer,
-  setDataAnswer,
+  counterAnswer,
+  setCounterAnswer,
+  setMsgFinal,
 }) {
   function hideAnswer(option) {
-    if (counter === 3) {
-      setCounter((counter = counter + 1));
-      if (dataAnswer >= 1) {
-        console.log("acabou e perdeu");
-      } else {
-        console.log("acabou e ganhou");
-      }
-    } else {
-      console.log("ainda tem mais");
-      setCounter((counter = counter + 1));
-    }
-
     setVisibleAnswer("hide");
     setFront("frontQuestion noClick");
     if (option === "Zap") {
       setColorText("green");
       setIcon("checkmark-circle-sharp");
       setIcons([...icons, <ion-icon name="checkmark-circle-sharp"></ion-icon>]);
-      setDataAnswer((dataAnswer = dataAnswer + 0));
-      console.log(dataAnswer);
+      setCounterAnswer((counterAnswer = counterAnswer + 0));
     } else if (option === "Quase não lembrei") {
       setColorText("orange");
       setIcon("help-circle-sharp");
       setIcons([...icons, <ion-icon name="help-circle-sharp"></ion-icon>]);
-      setDataAnswer((dataAnswer = dataAnswer + 0));
-      console.log(dataAnswer);
+      setCounterAnswer((counterAnswer = counterAnswer + 0));
     } else if (option === "Não lembrei") {
       setColorText("red");
       setIcon("close-circle-sharp");
       setIcons([...icons, <ion-icon name="close-circle-sharp"></ion-icon>]);
-      setDataAnswer((dataAnswer = dataAnswer + 1));
-      console.log(dataAnswer);
+      setCounterAnswer((counterAnswer = counterAnswer + 1));
     }
-    console.log(icons);
-    console.log(dataAnswer);
+    if (counter === 3) {
+      setCounter((counter = counter + 1));
+      if (counterAnswer >= 1) {
+        setMsgFinal([
+          ["😞 Putz..."],
+          ["Ainda faltam alguns... Mas não desanime!"],
+        ]);
+      } else {
+        setMsgFinal([
+          ["🥳 Parabéns!"],
+          ["Você não esqueceu de nenhum flashcard!"],
+        ]);
+      }
+    } else {
+      setCounter((counter = counter + 1));
+    }
   }
 
   return (

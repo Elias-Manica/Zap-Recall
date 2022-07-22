@@ -13,13 +13,15 @@ function Question({
   counter,
   icons,
   setIcons,
+  counterAnswer,
+  setCounterAnswer,
+  setMsgFinal,
 }) {
   const [front, setFront] = React.useState("frontQuestion");
   const [show, setShow] = React.useState("hide");
   const [visibleAnswer, setVisibleAnswer] = React.useState("hide");
   const [colorText, setColorText] = React.useState("black");
   const [icon, setIcon] = React.useState("play-circle-outline");
-  const [dataAnswer, setDataAnswer] = React.useState(0);
 
   return (
     <div className="question">
@@ -50,8 +52,9 @@ function Question({
           setIcon={setIcon}
           icons={icons}
           setIcons={setIcons}
-          dataAnswer={dataAnswer}
-          setDataAnswer={setDataAnswer}
+          counterAnswer={counterAnswer}
+          setCounterAnswer={setCounterAnswer}
+          setMsgFinal={setMsgFinal}
         />
       </div>
     </div>
@@ -83,6 +86,8 @@ export default function InicialDisplay() {
   ];
   const [counter, setCounter] = React.useState(0);
   const [icons, setIcons] = React.useState([]);
+  const [counterAnswer, setCounterAnswer] = React.useState(0);
+  const [msgFinal, setMsgFinal] = React.useState([[""], [""]]);
   return (
     <div className="inicialDisplay ">
       <div className="tittle">
@@ -100,11 +105,20 @@ export default function InicialDisplay() {
             setCounter={setCounter}
             icons={icons}
             setIcons={setIcons}
+            counterAnswer={counterAnswer}
+            setCounterAnswer={setCounterAnswer}
+            msgFinal={msgFinal}
+            setMsgFinal={setMsgFinal}
           />
         ))}
       </div>
 
-      <BottomStatus counter={counter} icons={icons} />
+      <BottomStatus
+        counter={counter}
+        icons={icons}
+        msgFinal={msgFinal}
+        setMsgFinal={setMsgFinal}
+      />
     </div>
   );
 }
