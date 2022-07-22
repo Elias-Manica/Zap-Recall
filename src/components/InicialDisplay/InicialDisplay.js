@@ -1,11 +1,13 @@
 import React from "react";
 
-import BottomStatus from "./BottomStatus";
-import Tittle from "./Tittle";
+import "./style.css";
 
-import selectFourCard from "./utils/selectFourCard";
-import shuffleArray from "./utils/shuffleArray";
-import Question from "./utils/Question";
+import BottomStatus from "../BottomStatus";
+import Tittle from "../Tittle";
+
+import selectFourCard from "../utils/selectFourCard";
+import shuffleArray from "../utils/shuffleArray";
+import Question from "../utils/Question";
 
 export default function InicialDisplay() {
   const data = [

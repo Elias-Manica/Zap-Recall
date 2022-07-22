@@ -18,57 +18,6 @@ h1 {
   color: #ffffff;
 }
 
-.allScreens {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.welcomeUser {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.welcomeUser img {
-  width: 136px;
-  height: 161px;
-  margin-bottom: 10px;
-}
-
-.buttomStart {
-  display: flex;
-  width: 40%;
-  height: 54px;
-  background: #ffffff;
-  border: 1px solid #d70900;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 5px;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.buttomStart p {
-  font-family: "Recursive";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  text-align: center;
-  color: #d70900;
-}
-
-.inicialDisplay {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
 .tittle {
   display: flex;
   margin-bottom: 30px;
@@ -78,13 +27,6 @@ h1 {
   width: 52px;
   height: 60px;
   margin-right: 20px;
-}
-
-.questions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
 }
 
 .frontQuestion {

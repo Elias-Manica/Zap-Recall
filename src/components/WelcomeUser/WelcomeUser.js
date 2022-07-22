@@ -1,4 +1,6 @@
-import logoZap from "./assets/images/light.png";
+import "./style.css";
+
+import logoZap from "../assets/images/light.png";
 
 export default function WelcomeUser() {
   return (
