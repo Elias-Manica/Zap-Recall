@@ -26,6 +26,13 @@
   font-size: 20px;
 }
 
+.frontQuestion:hover {
+  transform: scale(1.1, 1.1);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+  transition: 0.4s;
+}
+
 ion-icon[name="checkmark-circle-sharp"] {
   color: #2fbe34;
 }

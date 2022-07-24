@@ -67,3 +67,9 @@
   color: #ffffff;
   cursor: pointer;
 }
+
+.restart:hover {
+  box-shadow: 1px 1px #f34848, 2px 2px #f34848, 3px 3px #f34848;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
