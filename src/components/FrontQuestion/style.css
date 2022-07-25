@@ -45,6 +45,10 @@ ion-icon[name="close-circle-sharp"] {
   color: #ff3030;
 }
 
+ion-icon[name="play-circle-outline"]:active {
+  color: #fb6b6b;
+}
+
 @media (max-width: 935px) {
   .frontQuestion {
     width: 100%;
