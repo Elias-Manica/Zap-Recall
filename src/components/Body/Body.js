@@ -7,44 +7,28 @@ import "./style.css";
 import WelcomeUser from "../WelcomeUser/WelcomeUser";
 import InicialDisplay from "../InicialDisplay/InicialDisplay";
 
-export default function Body() {
+export default function Body({
+  react,
+  setreact,
+  html,
+  setHtml,
+  python,
+  setPython,
+}) {
   const [changeScreen, setChangeScreen] = React.useState(true);
-  const [group, setGroup] = React.useState([
-    {
-      numb: 1,
-      question: "O que é JSX?",
-      answer: "Uma extensão de linguagem do JavaScript",
-    },
-    {
-      question: "O React é __",
-      answer: "uma biblioteca JavaScript para construção de interfaces",
-    },
-    {
-      question: "Componentes devem iniciar com __ ",
-      answer: "letra maiúscula",
-    },
-    {
-      question: "Podemos colocar __ dentro do JSX",
-      answer: "expressões",
-    },
-    {
-      question: "O ReactDOM nos ajuda __",
-      answer: "interagindo com a DOM para colocar componentes React na mesma",
-    },
-    {
-      question: "Usamos o npm para __",
-      answer: "gerenciar os pacotes necessários e suas dependências",
-    },
-    {
-      question: "Usamos props para __",
-      answer: "passar diferentes informações para componentes",
-    },
-    {
-      question: "Usamos estado (state) para __",
-      answer:
-        "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente",
-    },
-  ]);
+  const [number, setNumber] = React.useState();
+  function selectOption() {
+    let select = document.getElementById("deck");
+    let opcaoTexto = select.options[select.selectedIndex].value;
+    if (Number(opcaoTexto) === 1) {
+      setNumber(1);
+    } else if (Number(opcaoTexto) === 2) {
+      setNumber(2);
+    } else if (Number(opcaoTexto) === 3) {
+      setNumber(3);
+    }
+    setChangeScreen(false);
+  }
 
   return (
     <div className="allScreens">
@@ -52,15 +36,25 @@ export default function Body() {
         {changeScreen ? (
           <>
             <WelcomeUser />
-            <div
-              className="buttomStart"
-              onClick={() => setChangeScreen(!changeScreen)}
-            >
+            <select id="deck">
+              <option value={1}>React</option>
+              <option value={2}>HTML/CSS/JS</option>
+              <option value={3}>Python</option>
+            </select>
+            <div className="buttomStart" onClick={() => selectOption()}>
               <p>Iniciar Recall!</p>
             </div>
           </>
         ) : (
-          <InicialDisplay group={group} setGroup={setGroup} />
+          <InicialDisplay
+            react={react}
+            setreact={setreact}
+            number={number}
+            html={html}
+            setHtml={setHtml}
+            python={python}
+            setPython={setPython}
+          />
         )}
       </>
     </div>

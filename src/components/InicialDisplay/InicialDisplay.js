@@ -11,15 +11,20 @@ import shuffleArray from "../utils/shuffleArray";
 import Question from "../utils/Question";
 let variavel;
 
-export default function InicialDisplay({ group }) {
-  console.log(group);
-  const data = group;
+export default function InicialDisplay({ react, number, html, python }) {
+  let data;
+  if (number === 1) {
+    data = react;
+  } else if (number === 2) {
+    data = html;
+  } else if (number === 3) {
+    data = python;
+  }
 
   if (variavel === undefined) {
     shuffleArray(data);
     selectFourCard(data);
     variavel = "done";
-    console.log("embaralhou");
   }
 
   const [counter, setCounter] = React.useState(0);

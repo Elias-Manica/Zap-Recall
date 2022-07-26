@@ -39,6 +39,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.5s;
 }
 
 .answer-visible .dontRemember p {
@@ -54,6 +55,11 @@
   color: #ffffff;
 }
 
+.dontRemember:hover {
+  -webkit-filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
+}
+
 .answer-visible .almostRemember {
   width: 85px;
   height: 40px;
@@ -62,6 +68,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.5s;
 }
 
 .answer-visible .almostRemember p {
@@ -77,6 +84,11 @@
   color: #ffffff;
 }
 
+.almostRemember:hover {
+  -webkit-filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
+}
+
 .answer-visible .remember {
   width: 85px;
   height: 40px;
@@ -85,6 +97,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.5s;
 }
 
 .answer-visible .remember p {
@@ -98,6 +111,11 @@
   text-align: center;
 
   color: #ffffff;
+}
+
+.remember:hover {
+  -webkit-filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
 }
 
 .answer-visible:hover {
