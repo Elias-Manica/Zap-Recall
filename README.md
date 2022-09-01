@@ -2,7 +2,7 @@
 
 A responsive website that the user can study programming by flashcards.
 
-gif
+![WhatsApp-Video-2022-09-01-at-18 37 29](https://user-images.githubusercontent.com/103606213/188018207-2e1da73d-8dc3-4e45-838c-6beb4c92e925.gif)
 
 Try it out now at https://zap-recall-bay.vercel.app/
 
